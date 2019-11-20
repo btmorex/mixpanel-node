@@ -136,6 +136,16 @@ mixpanel.track_batch([
     }
 ]);
 
+// update multiple profiles
+mixpanel.people.batch([
+    {
+        "$distinct_id": "13793",
+        "$set": {
+            Address: "unknown"
+        }
+    }
+]);
+
 // import an old event
 var mixpanel_importer = Mixpanel.init('valid mixpanel token', {
     key: 'valid api key for project'
